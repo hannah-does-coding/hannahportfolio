@@ -1,0 +1,16 @@
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+
+.env
+*.env
+
+node_modules/
+package-lock.json
+
+*.log
+
+assets/private/

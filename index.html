@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hannah Margareth R. Buer — Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+
+    <div class="tv-frame" aria-hidden="true"></div>
+
+    <!-- PROJECT CASE STUDY MODAL -->
+    <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+
+        <div class="modal-episode-bar">
+          <span class="episode-label">[ CASE STUDY ]</span>
+          <span class="modal-episode-title" id="modal-title">Project Name</span>
+          <button class="modal-close" id="modal-close-btn">✕ CLOSE</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-left">
+            <div class="modal-screenshot" id="modal-screenshot">
+              [ SCREENSHOT ]<br>Add image to<br>assets/images/
+            </div>
+            <div class="modal-links">
+              <a class="modal-btn" id="modal-live" href="#" target="_blank">► VIEW LIVE</a>
+              <a class="modal-btn modal-btn-ghost" id="modal-github" href="#" target="_blank">★ GITHUB</a>
+            </div>
+          </div>
+
+          <div class="modal-right">
+            <div class="modal-meta-row">
+              <span class="modal-cat" id="modal-cat">CATEGORY</span>
+              <span class="modal-status" id="modal-status">● LIVE</span>
+            </div>
+            <div class="modal-tags" id="modal-tags"></div>
+            <div class="modal-section">
+              <h4 class="modal-section-label">[ THE BRIEF ]</h4>
+              <p class="modal-text" id="modal-brief"></p>
+            </div>
+            <div class="modal-section">
+              <h4 class="modal-section-label">[ WHAT I BUILT ]</h4>
+              <p class="modal-text" id="modal-built"></p>
+            </div>
+            <div class="modal-section">
+              <h4 class="modal-section-label">[ WHAT I LEARNED ]</h4>
+              <p class="modal-text" id="modal-learned"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <span class="modal-footer-text">★ HMB.TV — SPECIAL BROADCAST ♡</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="screen">
+
+      <!-- TOP HUD -->
+      <div class="tv-hud">
+        <span class="hud-logo">♡ HMB.TV</span>
+        <span class="hud-channel" id="hud-channel">[ CH.00 — HOME ]</span>
+        <div class="hud-right">
+          <span class="hud-live">● LIVE</span>
+          <span class="hud-time" id="hud-time">00:00:00</span>
+        </div>
+      </div>
+
+      <div class="channel-viewport">
+
+        <!-- ================================
+             CH.00 — HOME
+        ================================= -->
+        <section id="ch-home" class="channel active">
+
+          <div class="hero-info-bar">
+            <div class="info-cell">
+              <span class="info-primary">Hannah Margareth R. Buer</span>
+              <span class="info-secondary">BSc Creative Computing Graduate · 2026</span>
+            </div>
+            <div class="info-cell center">
+              <span class="info-primary">▮▮▮▮▯ SIGNAL STRONG</span>
+              <span class="info-secondary">Bath Spa University · Class of 2026</span>
+            </div>
+            <div class="info-cell right">
+              <span class="info-primary">SAY HELLO ♡</span>
+              <span class="info-secondary">Just graduated · Open to hire ♡</span>
+            </div>
+          </div>
+
+          <div class="hero-canvas-wrap">
+            <canvas id="hero-canvas"></canvas>
+            <div class="hero-main">
+              <span class="broadcast-tag">ON AIR</span>
+              <p class="hero-welcome">welcome to my</p>
+              <h1 class="hero-port">PORT<span class="hero-heart">♡</span>FOLIO</h1>
+              <button class="btn hero-cta" data-channel="ch-about">► TUNE IN</button>
+            </div>
+          </div>
+
+          <div class="ticker-bar">
+            <span class="ticker-label">♡ LIVE</span>
+            <div class="ticker-wrap">
+              <p class="ticker-content">
+                ★ BSC CREATIVE COMPUTING GRADUATE 2026 &nbsp;&nbsp;
+                ♡ BATH SPA UNIVERSITY ALUMNA &nbsp;&nbsp;
+                ★ AVAILABLE FOR HIRE &nbsp;&nbsp;
+                ♡ ABU DHABI, UAE &nbsp;&nbsp;
+                ★ WEB DEVELOPER &nbsp;&nbsp;
+                ♡ GRAPHIC DESIGNER &nbsp;&nbsp;
+                ★ GAME DEVELOPER &nbsp;&nbsp;
+                ♡ ETHICAL HACKING CERTIFIED &nbsp;&nbsp;
+                ★ BSC CREATIVE COMPUTING GRADUATE 2026 &nbsp;&nbsp;
+                ♡ BATH SPA UNIVERSITY ALUMNA &nbsp;&nbsp;
+                ★ AVAILABLE FOR HIRE &nbsp;&nbsp;
+                ♡ ABU DHABI, UAE &nbsp;&nbsp;
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ================================
+             CH.01 — ABOUT
+        ================================= -->
+        <section id="ch-about" class="channel">
+
+          <div class="episode-bar">
+            <span class="episode-label">[ NOW AIRING ]</span>
+            <span class="episode-title">Episode 01 — Graduate, Developer & Designer</span>
+            <span class="episode-live">● ON AIR</span>
+          </div>
+
+          <div class="about-main-grid">
+
+            <div class="about-identity">
+              <div class="about-photo-frame">
+                <div class="about-photo-placeholder">
+                  <span>YOUR<br>PHOTO</span>
+                </div>
+                <span class="about-photo-nickname">"Hannah"</span>
+              </div>
+
+              <h2 class="about-name-big">Hannah<br>Margareth<br><em>R. Buer</em></h2>
+
+              <div class="about-role-pills">
+                <span class="role-pill">BSc Graduate ♡</span>
+                <span class="role-pill">Creative Dev</span>
+                <span class="role-pill">Designer</span>
+                <span class="role-pill">Game Dev</span>
+              </div>
+
+              <p class="about-bio-text">
+                I'm Hannah, a freshly graduated BSc Creative Computing
+                graduate from Bath Spa University in the UAE. I build
+                websites, apps, and games — and I care about making
+                things that feel as good as they look. Now looking for
+                my first role as a developer and designer in Abu Dhabi.
+                When I'm not coding, I'm collecting Pop Mart figures
+                and playing Honkai Star Rail. ♡
+              </p>
+            </div>
+
+            <div class="about-credentials">
+
+              <div class="about-cred-card">
+                <h3 class="cred-title">EDUCATION</h3>
+                <div class="about-entry">
+                  <div class="entry-spark"></div>
+                  <div class="entry-content">
+                    <p class="entry-title">Bath Spa University — RAK</p>
+                    <p class="entry-sub">BSc (Hons) Creative Computing</p>
+                    <span class="entry-date">2022 — 2026 ♡</span>
+                  </div>
+                </div>
+                <div class="about-entry">
+                  <div class="entry-spark"></div>
+                  <div class="entry-content">
+                    <p class="entry-title">Your High School</p>
+                    <p class="entry-sub">Add your school here</p>
+                    <span class="entry-date">Year — Year</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-cred-card">
+                <h3 class="cred-title">EXPERIENCE</h3>
+                <div class="about-entry">
+                  <div class="entry-spark"></div>
+                  <div class="entry-content">
+                    <p class="entry-title">Add Role Here</p>
+                    <p class="entry-sub">Company / Freelance</p>
+                    <span class="entry-date">Year — Year</span>
+                  </div>
+                </div>
+                <div class="about-entry">
+                  <div class="entry-spark"></div>
+                  <div class="entry-content">
+                    <p class="entry-title">Add Role Here</p>
+                    <p class="entry-sub">Company / Freelance</p>
+                    <span class="entry-date">Year — Present</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-cred-card cred-dark">
+                <div class="stat-card-header">[ SIGNAL INFO ]</div>
+                <div class="stat-row">
+                  <span class="stat-label">BASE</span>
+                  <span class="stat-value">Abu Dhabi, UAE</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">MAJOR</span>
+                  <span class="stat-value">BSc (Hons) Creative Computing</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">GRAD</span>
+                  <span class="stat-value">Class of 2026 ♡</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">CERT</span>
+                  <span class="stat-value">Ethical Hacking</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">STATUS</span>
+                  <span class="stat-value status-available">● AVAILABLE</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="about-tools-strip">
+            <span class="tools-strip-label">[ TOOLS I USE ]</span>
+            <div class="tools-strip-items">
+              <span class="tool-badge">Figma</span>
+              <span class="tool-badge">VS Code</span>
+              <span class="tool-badge">Photoshop</span>
+              <span class="tool-badge">Blender</span>
+              <span class="tool-badge">Unity</span>
+              <span class="tool-badge">Phaser.js</span>
+              <span class="tool-badge">Python</span>
+              <span class="tool-badge">JavaScript</span>
+              <span class="tool-badge">HTML / CSS</span>
+              <span class="tool-badge">After Effects</span>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ================================
+             CH.02 — PROJECTS
+        ================================= -->
+        <section id="ch-projects" class="channel">
+
+          <div class="episode-bar">
+            <span class="episode-label">[ NOW SCREENING ]</span>
+            <span class="episode-title">Episode 02 — Programme Guide</span>
+            <span class="episode-live">● ON AIR</span>
+          </div>
+
+          <div class="projects-wrapper">
+
+            <div class="projects-header">
+              <div class="section-tag">
+                <div class="star star--tiny"></div>
+                <span>♡ CLICK A CARD TO VIEW CASE STUDY ♡</span>
+              </div>
+              <div class="project-filter">
+                <button class="filter-btn active" data-filter="all">★ ALL</button>
+                <button class="filter-btn" data-filter="web">WEB</button>
+                <button class="filter-btn" data-filter="game">GAME</button>
+                <button class="filter-btn" data-filter="design">DESIGN</button>
+                <button class="filter-btn" data-filter="app">APP</button>
+              </div>
+            </div>
+
+            <div class="ribbon-divider">♡ ★ ♡ ★ ♡</div>
+
+            <div class="mosaic-grid">
+
+              <div class="project-card" data-cat="web" data-project="tindahan">
+                <div class="project-meta">
+                  <span class="project-cat">WEB APP</span>
+                  <span class="project-status live">● LIVE</span>
+                </div>
+                <h3 class="project-title">Name</h3>
+                <p class="project-desc">Description</p>
+                <div class="project-tags">
+                  <span class="ptag">HTML</span>
+                  <span class="ptag">CSS</span>
+                  <span class="ptag">JavaScript</span>
+                </div>
+                <span class="project-cta">► VIEW CASE STUDY</span>
+              </div>
+
+              <div class="project-card" data-cat="game" data-project="starfall">
+                <div class="project-meta">
+                  <span class="project-cat">GAME</span>
+                  <span class="project-status wip">● WIP</span>
+                </div>
+                <h3 class="project-title">Name</h3>
+                <p class="project-desc">Description</p>
+                <div class="project-tags">
+                  <span class="ptag">Phaser.js</span>
+                  <span class="ptag">JavaScript</span>
+                  <span class="ptag">Tiled</span>
+                </div>
+                <span class="project-cta">► VIEW CASE STUDY</span>
+              </div>
+
+              <div class="project-card" data-cat="app" data-project="bloom">
+                <div class="project-meta">
+                  <span class="project-cat">APP</span>
+                  <span class="project-status live">● LIVE</span>
+                </div>
+                <h3 class="project-title">Description</h3>
+                <p class="project-desc">Description</p>
+                <div class="project-tags">
+                  <span class="ptag">HTML</span>
+                  <span class="ptag">CSS</span>
+                  <span class="ptag">JS</span>
+                </div>
+                <span class="project-cta">► VIEW CASE STUDY</span>
+              </div>
+
+              <div class="project-card" data-cat="design" data-project="cipher">
+                <div class="project-meta">
+                  <span class="project-cat">DESIGN</span>
+                  <span class="project-status live">● LIVE</span>
+                </div>
+                <h3 class="project-title">Description</h3>
+                <p class="project-desc">Description</p>
+                <div class="project-tags">
+                  <span class="ptag">Figma</span>
+                  <span class="ptag">UI/UX</span>
+                </div>
+                <span class="project-cta">► VIEW CASE STUDY</span>
+              </div>
+
+              <div class="project-card" data-cat="web" data-project="orbit">
+                <div class="project-meta">
+                  <span class="project-cat">WEB</span>
+                  <span class="project-status live">● LIVE</span>
+                </div>
+                <h3 class="project-title">Description</h3>
+                <p class="project-desc">Description</p>
+                <div class="project-tags">
+                  <span class="ptag">HTML</span>
+                  <span class="ptag">CSS</span>
+                  <span class="ptag">JavaScript</span>
+                </div>
+                <span class="project-cta">► VIEW CASE STUDY</span>
+              </div>
+
+              <div class="project-card" data-cat="web" data-project="hmbtv">
+                <div class="project-meta">
+                  <span class="project-cat">PORTFOLIO</span>
+                  <span class="project-status live">● LIVE</span>
+                </div>
+                <h3 class="project-title">HMB.TV</h3>
+                <p class="project-desc">This portfolio. Y2K Coquette meets Retro CRT.</p>
+                <div class="project-tags">
+                  <span class="ptag">HTML</span>
+                  <span class="ptag">CSS</span>
+                  <span class="ptag">JS</span>
+                </div>
+                <span class="project-cta">► VIEW CASE STUDY</span>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================
+             CH.03 — MISC
+        ================================= -->
+        <section id="ch-skills" class="channel">
+
+          <div class="episode-bar">
+            <span class="episode-label">[ BROADCASTING ]</span>
+            <span class="episode-title">Episode 03 — Miscellaneous</span>
+            <span class="episode-live">● ON AIR</span>
+          </div>
+
+          <div class="misc-wrapper">
+
+            <div class="misc-top-row">
+
+              <div class="now-showing-card">
+                <div class="ns-header-bar">
+                  <span>♡ NOW SHOWING</span>
+                  <span class="ns-live">● ON AIR</span>
+                </div>
+                <div class="ns-items">
+                  <div class="ns-item">
+                    <span class="ns-label">[ NOW PLAYING ]</span>
+                    <span class="ns-value">Honkai Star Rail</span>
+                  </div>
+                  <div class="ns-item">
+                    <span class="ns-label">[ NOW WATCHING ]</span>
+                    <span class="ns-value">fave show ♡</span>
+                  </div>
+                  <div class="ns-item">
+                    <span class="ns-label">[ NOW LISTENING ]</span>
+                    <span class="ns-value">fave artist</span>
+                  </div>
+                  <div class="ns-item">
+                    <span class="ns-label">[ NOW LEARNING ]</span>
+                    <span class="ns-value">Learning what</span>
+                  </div>
+                  <div class="ns-item">
+                    <span class="ns-label">[ NOW CRAVING ]</span>
+                    <span class="ns-value">Food ♡</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quiz-section">
+                <div class="quiz-header">
+                  <span class="quiz-title">[ FUN FACTS ]</span>
+                  <span class="quiz-sub">tap a card to reveal ♡</span>
+                </div>
+                <div class="quiz-grid">
+
+                  <div class="quiz-card" onclick="this.classList.toggle('flipped')">
+                    <div class="quiz-front">
+                      <span class="quiz-q-num">Q.01</span>
+                      <p class="quiz-q">Where am I originally from?</p>
+                      <span class="quiz-hint">tap to reveal ♡</span>
+                    </div>
+                    <div class="quiz-back">
+                      <span class="quiz-a-label">ANSWER:</span>
+                      <p class="quiz-a">The Philippines 🇵🇭</p>
+                    </div>
+                  </div>
+
+                  <div class="quiz-card" onclick="this.classList.toggle('flipped')">
+                    <div class="quiz-front">
+                      <span class="quiz-q-num">Q.02</span>
+                      <p class="quiz-q">Question?</p>
+                      <span class="quiz-hint">tap to reveal ♡</span>
+                    </div>
+                    <div class="quiz-back">
+                      <span class="quiz-a-label">ANSWER:</span>
+                      <p class="quiz-a">Answer ♡</p>
+                    </div>
+                  </div>
+
+                  <div class="quiz-card" onclick="this.classList.toggle('flipped')">
+                    <div class="quiz-front">
+                      <span class="quiz-q-num">Q.03</span>
+                      <p class="quiz-q">Question</p>
+                      <span class="quiz-hint">tap to reveal ♡</span>
+                    </div>
+                    <div class="quiz-back">
+                      <span class="quiz-a-label">ANSWER:</span>
+                      <p class="quiz-a">Answer ♡</p>
+                    </div>
+                  </div>
+
+                  <div class="quiz-card" onclick="this.classList.toggle('flipped')">
+                    <div class="quiz-front">
+                      <span class="quiz-q-num">Q.04</span>
+                      <p class="quiz-q">Question?</p>
+                      <span class="quiz-hint">tap to reveal ♡</span>
+                    </div>
+                    <div class="quiz-back">
+                      <span class="quiz-a-label">ANSWER:</span>
+                      <p class="quiz-a">Answer ★</p>
+                    </div>
+                  </div>
+
+                  <div class="quiz-card" onclick="this.classList.toggle('flipped')">
+                    <div class="quiz-front">
+                      <span class="quiz-q-num">Q.05</span>
+                      <p class="quiz-q">Question?</p>
+                      <span class="quiz-hint">tap to reveal ♡</span>
+                    </div>
+                    <div class="quiz-back">
+                      <span class="quiz-a-label">ANSWER:</span>
+                      <p class="quiz-a">Answer ♡</p>
+                    </div>
+                  </div>
+
+                  <div class="quiz-card" onclick="this.classList.toggle('flipped')">
+                    <div class="quiz-front">
+                      <span class="quiz-q-num">Q.06</span>
+                      <p class="quiz-q">Question?</p>
+                      <span class="quiz-hint">tap to reveal ♡</span>
+                    </div>
+                    <div class="quiz-back">
+                      <span class="quiz-a-label">ANSWER:</span>
+                      <p class="quiz-a">Answer ★</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div class="skills-card">
+              <div class="skills-header-bar">
+                <span>♡ BROADCAST CAPABILITIES</span>
+                <span class="skills-signal">▮▮▮▮▯ SIGNAL STRONG</span>
+              </div>
+              <div class="skills-grid">
+
+                <div class="skill-col">
+                  <p class="skill-col-title">[ DEVELOPMENT ]</p>
+                  <div class="skill-row">
+                    <span class="skill-name">HTML / CSS</span>
+                    <div class="signal-bars">
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar filled"></span>
+                    </div>
+                    <span class="skill-pct">100%</span>
+                  </div>
+                  <div class="skill-row">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="signal-bars">
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar"></span>
+                    </div>
+                    <span class="skill-pct">80%</span>
+                  </div>
+                  <div class="skill-row">
+                    <span class="skill-name">Python</span>
+                    <div class="signal-bars">
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar filled"></span><span class="bar"></span>
+                      <span class="bar"></span>
+                    </div>
+                    <span class="skill-pct">60%</span>
+                  </div>
+                  <div class="skill-row">
+                    <span class="skill-name">Phaser.js</span>
+                    <div class="signal-bars">
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar filled"></span><span class="bar"></span>
+                      <span class="bar"></span>
+                    </div>
+                    <span class="skill-pct">60%</span>
+                  </div>
+                </div>
+
+                <div class="skill-col">
+                  <p class="skill-col-title">[ DESIGN ]</p>
+                  <div class="skill-row">
+                    <span class="skill-name">Figma</span>
+                    <div class="signal-bars">
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar"></span>
+                    </div>
+                    <span class="skill-pct">80%</span>
+                  </div>
+                  <div class="skill-row">
+                    <span class="skill-name">Photoshop</span>
+                    <div class="signal-bars">
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar"></span>
+                    </div>
+                    <span class="skill-pct">80%</span>
+                  </div>
+                  <div class="skill-row">
+                    <span class="skill-name">Graphic Design</span>
+                    <div class="signal-bars">
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar filled"></span>
+                    </div>
+                    <span class="skill-pct">95%</span>
+                  </div>
+                  <div class="skill-row">
+                    <span class="skill-name">Blender</span>
+                    <div class="signal-bars">
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar"></span><span class="bar"></span>
+                      <span class="bar"></span>
+                    </div>
+                    <span class="skill-pct">40%</span>
+                  </div>
+                </div>
+
+                <div class="skill-col">
+                  <p class="skill-col-title">[ OTHER ]</p>
+                  <div class="skill-row">
+                    <span class="skill-name">Video Editing</span>
+                    <div class="signal-bars">
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar"></span>
+                    </div>
+                    <span class="skill-pct">80%</span>
+                  </div>
+                  <div class="skill-row">
+                    <span class="skill-name">Photography</span>
+                    <div class="signal-bars">
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar"></span>
+                    </div>
+                    <span class="skill-pct">80%</span>
+                  </div>
+                  <div class="skill-row">
+                    <span class="skill-name">Ethical Hacking</span>
+                    <div class="signal-bars">
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar filled"></span><span class="bar"></span>
+                      <span class="bar"></span>
+                    </div>
+                    <span class="skill-pct">65%</span>
+                  </div>
+                  <div class="skill-row">
+                    <span class="skill-name">Writing</span>
+                    <div class="signal-bars">
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar filled"></span><span class="bar filled"></span>
+                      <span class="bar filled"></span>
+                    </div>
+                    <span class="skill-pct">95%</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="resume-card">
+              <div class="resume-left">
+                <span class="resume-tag">[ BROADCAST PACKAGE ]</span>
+                <h3 class="resume-title">Download<br><em>my résumé.</em></h3>
+                <p class="resume-desc">Full CV including education, experience, skills and certifications — ready to send.</p>
+              </div>
+              <div class="resume-right">
+                <div class="resume-signal">
+                  <span>▮▮▮▮▮</span>
+                  <span>FILE READY</span>
+                </div>
+                <a href="assets/hannah-buer-cv.pdf" download class="resume-btn">► DOWNLOAD CV</a>
+                <span class="resume-format">PDF FORMAT</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ================================
+             CH.04 — CONTACT
+        ================================= -->
+        <section id="ch-contact" class="channel">
+
+          <div class="episode-bar">
+            <span class="episode-label">[ TRANSMITTING ]</span>
+            <span class="episode-title">Episode 04 — Get In Touch</span>
+            <span class="episode-live">● ON AIR</span>
+          </div>
+
+          <!-- Full-width hero panel -->
+          <div class="contact-hero">
+            <div class="contact-hero-left">
+              <span class="contact-hero-tag">[ OPEN FOR TRANSMISSION ]</span>
+              <h2 class="contact-hero-heading">Let's work<br><em>together.</em></h2>
+              <p class="contact-hero-sub">
+                Fresh BSc graduate based in Abu Dhabi, UAE.
+                Available for full-time roles, freelance projects,
+                and creative collaborations. ♡
+              </p>
+              <div class="contact-availability">
+                <span class="avail-dot"></span>
+                <span class="avail-text">AVAILABLE · RESPONDING WITHIN 24HRS</span>
+              </div>
+            </div>
+            <div class="contact-hero-right">
+              <a href="mailto:youremail@email.com" class="contact-hero-btn">
+                <span class="contact-hero-btn-top">♡ SEND A SIGNAL</span>
+                <span class="contact-hero-btn-email">youremail@email.com</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Three-column info grid -->
+          <div class="contact-grid">
+
+            <!-- Direct contact -->
+            <div class="contact-panel contact-panel-dark">
+              <div class="contact-panel-header">[ DIRECT LINE ]</div>
+              <div class="contact-direct-list">
+
+                <a href="mailto:youremail@email.com" class="contact-direct-row">
+                  <span class="contact-direct-icon">♡</span>
+                  <div class="contact-direct-info">
+                    <span class="contact-direct-label">EMAIL</span>
+                    <span class="contact-direct-value">youremail@email.com</span>
+                  </div>
+                  <span class="contact-direct-arrow">→</span>
+                </a>
+
+                <a href="tel:+1234567890" class="contact-direct-row">
+                  <span class="contact-direct-icon">★</span>
+                  <div class="contact-direct-info">
+                    <span class="contact-direct-label">PHONE</span>
+                    <span class="contact-direct-value">+123 456 7890</span>
+                  </div>
+                  <span class="contact-direct-arrow">→</span>
+                </a>
+
+                <a href="assets/hannah-buer-cv.pdf" download class="contact-direct-row">
+                  <span class="contact-direct-icon">♡</span>
+                  <div class="contact-direct-info">
+                    <span class="contact-direct-label">RESUME</span>
+                    <span class="contact-direct-value">Download CV (PDF)</span>
+                  </div>
+                  <span class="contact-direct-arrow">↓</span>
+                </a>
+
+              </div>
+            </div>
+
+            <!-- Social channels styled as TV channel tiles -->
+            <div class="contact-panel contact-panel-light">
+              <div class="contact-panel-header-light">[ BROADCAST CHANNELS ]</div>
+              <div class="contact-socials-grid">
+
+                <a href="#" target="_blank" class="contact-social-tile">
+                  <span class="social-tile-ch">CH 10</span>
+                  <span class="social-tile-name">LinkedIn</span>
+                  <span class="social-tile-desc">Professional network</span>
+                </a>
+
+                <a href="#" target="_blank" class="contact-social-tile">
+                  <span class="social-tile-ch">CH 11</span>
+                  <span class="social-tile-name">GitHub</span>
+                  <span class="social-tile-desc">Code & projects</span>
+                </a>
+
+                <a href="#" target="_blank" class="contact-social-tile">
+                  <span class="social-tile-ch">CH 12</span>
+                  <span class="social-tile-name">Instagram</span>
+                  <span class="social-tile-desc">Creative life</span>
+                </a>
+
+                <a href="#" target="_blank" class="contact-social-tile">
+                  <span class="social-tile-ch">CH 13</span>
+                  <span class="social-tile-name">Behance</span>
+                  <span class="social-tile-desc">Design portfolio</span>
+                </a>
+
+              </div>
+            </div>
+
+            <!-- Signal info -->
+            <div class="contact-panel contact-panel-dark">
+              <div class="contact-panel-header">[ SIGNAL INFO ]</div>
+              <div class="contact-signal-rows">
+                <div class="contact-signal-row">
+                  <span class="csignal-label">LOCATION</span>
+                  <span class="csignal-value">Abu Dhabi, UAE</span>
+                </div>
+                <div class="contact-signal-row">
+                  <span class="csignal-label">TIMEZONE</span>
+                  <span class="csignal-value">GST (UTC +4)</span>
+                </div>
+                <div class="contact-signal-row">
+                  <span class="csignal-label">OPEN TO</span>
+                  <span class="csignal-value">Full-time · Freelance</span>
+                </div>
+                <div class="contact-signal-row">
+                  <span class="csignal-label">RELOCATE</span>
+                  <span class="csignal-value">Open to discuss ♡</span>
+                </div>
+                <div class="contact-signal-row">
+                  <span class="csignal-label">RESPONSE</span>
+                  <span class="csignal-value csignal-gold">Within 24 hours</span>
+                </div>
+                <div class="contact-signal-row">
+                  <span class="csignal-label">STATUS</span>
+                  <span class="csignal-value status-available">● AVAILABLE</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <footer id="footer">
+            <p class="footer-text">
+              ♡ HMB.TV — SIGNAL OK —
+              <span id="year" class="footer-year"></span> ♡
+            </p>
+          </footer>
+
+        </section>
+
+      </div>
+
+      <!-- BOTTOM CHANNEL NAV -->
+      <nav class="tv-nav">
+        <button class="tv-ch-btn active" data-channel="ch-home">
+          <span class="ch-num">CH 00</span>
+          <span class="ch-name">HOME</span>
+        </button>
+        <button class="tv-ch-btn" data-channel="ch-about">
+          <span class="ch-num">CH 01</span>
+          <span class="ch-name">ABOUT</span>
+        </button>
+        <button class="tv-ch-btn" data-channel="ch-projects">
+          <span class="ch-num">CH 02</span>
+          <span class="ch-name">PROJECTS</span>
+        </button>
+        <button class="tv-ch-btn" data-channel="ch-skills">
+          <span class="ch-num">CH 03</span>
+          <span class="ch-name">MISC</span>
+        </button>
+        <button class="tv-ch-btn" data-channel="ch-contact">
+          <span class="ch-num">CH 04</span>
+          <span class="ch-name">CONTACT</span>
+        </button>
+      </nav>
+
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
