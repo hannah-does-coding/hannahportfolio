@@ -34,58 +34,15 @@ const channelNames = {
    update the text before deploying
 ======================== */
 const projectData = {
-  tindahan: {
-    title: 'Tindahan',
-    cat: 'WEB APP',
+  musicwidget: {
+    title: 'Melobox',
+    cat: 'DESKTOP APP',
     status: 'live',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    brief: 'Sari-sari store owners in the Philippines track stock and customer credit in paper notebooks that get lost or miscounted. There was no simple, offline-first digital solution built for their needs.',
-    built: 'A mobile-first web app with a product inventory list, quick add/subtract stock buttons, and a customer credit ledger. All data persists in localStorage — no account or internet connection required.',
-    learned: 'I had not worked with localStorage before this project. Stock counts were resetting on refresh until I understood that browser memory clears on reload — I then built a save/load layer that syncs on every change.',
-    liveUrl:   '#',
-    githubUrl: '#'
-  },
-  starfall: {
-    title: 'Starfall',
-    cat: 'GAME',
-    status: 'wip',
-    tags: ['Phaser.js', 'JavaScript', 'Tiled'],
-    brief: 'I wanted to build a playable RPG town prototype to learn game development fundamentals — tile maps, player movement, collision, and NPC interaction — without a full engine like Unity.',
-    built: 'A 2D top-down RPG town using Phaser.js with a walkable tile map built in Tiled, sprite-based player movement, collision layers, and proximity-triggered NPC dialogue boxes.',
-    learned: 'Tile map layers and collision zones were the trickiest part. I learned to separate walkable tiles, collision objects, and decorative layers in Tiled and reference each correctly in Phaser.',
-    liveUrl:   '#',
-    githubUrl: '#'
-  },
-  bloom: {
-    title: 'Bloom',
-    cat: 'APP',
-    status: 'live',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    brief: 'I kept forgetting to water my plants and had no easy way to track which ones needed attention and when — without something that felt clinical or boring.',
-    built: 'A plant care tracker with a plant list, individual watering schedules, health status tags, and a dashboard showing what needs attention today. Styled with a soft, cute UI.',
-    learned: 'Working with date calculations in JavaScript — figuring out days since last watered and comparing to each plant\'s watering interval — taught me a lot about the Date API.',
-    liveUrl:   '#',
-    githubUrl: '#'
-  },
-  cipher: {
-    title: 'Cipher UI',
-    cat: 'DESIGN',
-    status: 'live',
-    tags: ['Figma', 'UI/UX'],
-    brief: 'Ethical hacking tools typically have outdated, intimidating interfaces that prioritise function over clarity. I wanted to design a dashboard that felt modern and readable.',
-    built: 'A Figma UI concept for an ethical hacking dashboard — network scan results, vulnerability tables, live log feeds, and status indicators — in a clean dark interface with clear data hierarchy.',
-    learned: 'Designing for dense, technical data taught me a lot about visual hierarchy and whitespace. Making a vulnerability table feel scannable rather than overwhelming was the core design challenge.',
-    liveUrl:   '#',
-    githubUrl: '#'
-  },
-  orbit: {
-    title: 'Orbit',
-    cat: 'WEB',
-    status: 'live',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    brief: 'I wanted a journaling app that felt personal and cosy rather than clinical — something I\'d actually want to open every day rather than a productivity tool.',
-    built: 'A personal journaling web app with a pixel art aesthetic, mood tagging on each entry, a monthly calendar view, and a streak tracker. All entries stored in localStorage.',
-    learned: 'Building the calendar view taught me how to work with the JavaScript Date object — calculating which day of the week a month starts on, handling month lengths, and rendering a dynamic grid.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Electron'],
+    brief: 'I wanted a music player that felt like a physical little gadget sitting on my desktop — cozy and personal — rather than another flat, generic media player UI.',
+    built: 'A desktop music widget with a custom title bar, album art, play/pause/skip controls, and a draggable progress bar with a styled thumb. Wrapped in Electron for a frameless, always-on-top window that floats over the desktop like a real widget.',
+    learned: 'Getting the range-input thumb to sit centered on its track took real trial and error with the CSS box model. Wrapping it in Electron also taught me how a preload script bridges the page and the main process, so the window controls can work safely without exposing Node access directly to the page.',
+    media: { type: 'video', src: 'assets/melobox-project.mp4' },
     liveUrl:   '#',
     githubUrl: '#'
   },
@@ -97,6 +54,7 @@ const projectData = {
     brief: 'I wanted a portfolio that felt like me — playful, aesthetic, and technically interesting — rather than another standard developer template that every graduate submits.',
     built: 'A channel-based portfolio styled as Y2K Coquette meets Retro CRT TV. Channel switching with static effects, a live clock HUD, an interactive canvas particle system that reacts to mouse movement.',
     learned: 'This project taught me how to combine many small techniques — CSS clip-path animations, canvas particle physics with velocity and repulsion, CRT visual effects, and a complete design system — into one coherent experience.',
+    media: { type: 'image', src: 'assets/images/hmbtv.png' },
     liveUrl:   '#',
     githubUrl: '#'
   }
@@ -133,8 +91,16 @@ function openModal(projectKey) {
   liveBtn.style.display   = p.liveUrl   === '#' ? 'none' : 'inline-block';
   githubBtn.style.display = p.githubUrl === '#' ? 'none' : 'inline-block';
 
-  document.getElementById('modal-screenshot').innerHTML =
-    `[ SCREENSHOT ]<br>Add assets/images/${projectKey}.png`;
+  const screenshotEl = document.getElementById('modal-screenshot');
+  if (p.media && p.media.type === 'video') {
+    screenshotEl.innerHTML = `
+      <video src="${p.media.src}" controls playsinline></video>
+    `;
+  } else if (p.media && p.media.type === 'image') {
+    screenshotEl.innerHTML = `<img src="${p.media.src}" alt="${p.title} screenshot">`;
+  } else {
+    screenshotEl.innerHTML = `[ SCREENSHOT ]<br>Add assets/images/${projectKey}.png`;
+  }
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
@@ -143,6 +109,12 @@ function openModal(projectKey) {
 function closeModal() {
   modal.classList.remove('active');
   document.body.style.overflow = '';
+
+  const video = document.querySelector('#modal-screenshot video');
+  if (video) {
+    video.pause();
+    video.currentTime = 0;
+  }
 }
 
 if (modalClose) modalClose.addEventListener('click', closeModal);
