@@ -582,6 +582,7 @@ body::after {
   100% { opacity: 0; }
 }
 
+.episode-bar,
 .about-episode-bar {
   display: flex;
   align-items: center;
